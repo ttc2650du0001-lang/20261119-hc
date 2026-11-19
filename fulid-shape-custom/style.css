@@ -1,0 +1,375 @@
+ 
+@charset "utf-8";
+ 
+/* ====================
+ 全体共通
+==================== */
+ 
+* {
+  box-sizing: border-box;
+}
+ 
+body {
+  margin: 0;
+  color: #222;
+  font-size: 16px;
+  min-width: 1200px;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7fa;
+}
+ 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ 
+/* ====================
+ header
+==================== */
+ 
+header {
+  height: 596px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+ 
+  background: linear-gradient(
+    120deg,
+    #f3f3f8,
+    #e4e1f1,
+    #d9e6f2
+  );
+}
+ 
+/* ロゴ・ナビ */
+ 
+.links {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 100px 0;
+  position: relative;
+  z-index: 2;
+}
+ 
+.links .logo {
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+ 
+.links nav {
+  display: flex;
+  gap: 50px;
+}
+ 
+.links nav a {
+  font-size: 14px;
+  font-weight: bold;
+  transition: color .3s;
+}
+ 
+.links nav a:hover {
+  color: #8372c7;
+}
+ 
+/* メインコピー */
+ 
+.main-copy {
+  width: 100%;
+  font-size: 65px;
+  font-weight: 700;
+  text-align: center;
+  margin: 120px 0 0;
+  letter-spacing: 3px;
+  position: relative;
+  z-index: 2;
+}
+ 
+/* サブコピー */
+ 
+.sub-copy {
+  font-size: 23px;
+  position: absolute;
+  left: 200px;
+  bottom: 40px;
+  line-height: 1.8;
+  z-index: 2;
+}
+ 
+/* ====================
+ ガラス流動シェイプ
+==================== */
+ 
+.header-shape {
+  position: absolute;
+  width: 430px;
+  height: 430px;
+  right: 80px;
+  top: 100px;
+ 
+  border-radius: 60% 40% 50% 50%;
+ 
+  background: linear-gradient(
+    135deg,
+    #ffffffcc,
+    #b7a9e6aa,
+    #9dd9e6aa,
+    #ffffffcc
+  );
+ 
+  border: 2px solid #ffffffaa;
+ 
+  box-shadow:
+    inset 15px 15px 35px #ffffffcc,
+    inset -20px -20px 40px #7b79a477,
+    15px 20px 35px #9999aa66;
+ 
+  backdrop-filter: blur(12px);
+ 
+  animation: colorChange 8s ease-in-out infinite alternate;
+}
+ 
+/* 色の変化 */
+ 
+@keyframes colorChange {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+ 
+  100% {
+    filter: hue-rotate(80deg);
+  }
+}
+ 
+/* ====================
+ main共通
+==================== */
+ 
+main {
+  width: 1200px;
+  margin: auto;
+}
+ 
+section {
+  margin: 120px auto;
+}
+ 
+h2 {
+  font-size: 36px;
+  margin-bottom: 1em;
+  line-height: 1.5;
+}
+ 
+.text-area p {
+  font-size: 18px;
+  line-height: 1.9;
+}
+ 
+.small-title {
+  color: #8880b2;
+  font-size: 14px !important;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+ 
+/* ====================
+ feature
+==================== */
+ 
+.feature {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 100px;
+}
+ 
+.feature .text-area {
+  margin-top: 100px;
+}
+ 
+/* 3つのガラスシェイプ */
+ 
+.features {
+  width: 680px;
+  height: 600px;
+  position: relative;
+  text-align: center;
+  color: #222;
+}
+ 
+.features > div {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 360px;
+  height: 360px;
+ 
+  border-radius: 55% 45% 60% 40%;
+ 
+  background: linear-gradient(
+    135deg,
+    #ffffffcc,
+    #b8b0e6aa,
+    #9dcfe6aa,
+    #ffffffcc
+  );
+ 
+  border: 2px solid #ffffffaa;
+ 
+  box-shadow:
+    inset 15px 15px 35px #ffffffcc,
+    inset -20px -20px 40px #7775a455,
+    10px 15px 25px #ccccd866;
+ 
+  backdrop-filter: blur(10px);
+ 
+  animation: colorChange 10s ease-in-out infinite alternate;
+}
+ 
+.features > div > div {
+  text-align: center;
+}
+ 
+/* 中央 */
+ 
+.center {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+ 
+/* 左 */
+ 
+.left {
+  left: 0;
+  bottom: 0;
+}
+ 
+/* 右 */
+ 
+.right {
+  right: 0;
+  bottom: 0;
+}
+ 
+/* 特徴の文字 */
+ 
+.features h3 {
+  font-size: 23px;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+ 
+.features p {
+  font-size: 15px;
+  line-height: 1.8;
+}
+ 
+/* ====================
+ new-era
+==================== */
+ 
+.new-era {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+ 
+.new-era .text-area {
+  width: 44%;
+}
+ 
+/* ガラスパネル */
+ 
+.image-area {
+  width: 50%;
+  height: 450px;
+ 
+  background: linear-gradient(
+    135deg,
+    #e7e3f5,
+    #d5e7f0,
+    #eeeaf8
+  );
+ 
+  border: 1px solid #ffffff;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+ 
+/* 大きなガラスシェイプ */
+ 
+.big-shape {
+  width: 320px;
+  height: 320px;
+ 
+  border-radius: 45% 55% 65% 35%;
+ 
+  background: linear-gradient(
+    135deg,
+    #ffffffdd,
+    #a9a1dcaa,
+    #8dcddd99,
+    #ffffffdd
+  );
+ 
+  border: 2px solid #ffffffaa;
+ 
+  box-shadow:
+    inset 20px 20px 40px #ffffffcc,
+    inset -25px -25px 45px #7775a466,
+    15px 20px 30px #aaa9b966;
+ 
+  backdrop-filter: blur(15px);
+ 
+  animation: colorChange 9s ease-in-out infinite alternate;
+}
+ 
+.image-area p {
+  position: absolute;
+  bottom: 15px;
+  right: 25px;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+ 
+/* ====================
+ footer
+==================== */
+ 
+footer {
+  height: 200px;
+  background: linear-gradient(
+    120deg,
+    #292736,
+    #51496e,
+    #292736
+  );
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ 
+.copyright {
+  color: #ffffff;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+ 
+/* 動きを減らす設定への対応 */
+ 
+@media (prefers-reduced-motion: reduce) {
+  .header-shape,
+  .features > div,
+  .big-shape {
+    animation: none;
+  }
+}
+ 
